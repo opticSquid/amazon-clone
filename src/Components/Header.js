@@ -30,7 +30,7 @@ const Header = () =>
                         <span className="header__optionLineTwo">{ user ? 'Signout' : 'Sign In' }</span>
                     </div>
                 </Link>
-                <Link className="header__link" to="/">
+                <Link className="header__link" to="/orders">
                     <div className="header__option" >
                         <span className="header__optionLineOne">Returns</span>
                         <span className="header__optionLineTwo">& Orders</span>
