@@ -19,6 +19,11 @@ const  reducer = (state,action) =>
                 newBasket.splice(index,1)
             }
             return {...state, basket: newBasket};
+        case 'EMPTY_BASKET':
+            return{
+                ...state,
+                basket: []
+            }
         case 'SET_USER':
             return{
                 ...state,

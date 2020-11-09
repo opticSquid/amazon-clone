@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Checkout from "./Components/Checkout";
 import Payment from "./Components/Payment";
+import Orders from "./Components/Orders";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
@@ -31,7 +32,7 @@ function App() {
         });
       }
     });
-  }, []); //Fires once only while loading
+  }, [dispatch]); //Fires once only while loading
   return (
     <Router>
       <div className="App">
@@ -39,6 +40,10 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Header/>
+            <Orders/>
           </Route>
           <Route path="/login">
             <Login />

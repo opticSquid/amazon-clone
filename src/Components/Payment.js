@@ -7,8 +7,9 @@ import CurrencyFormat from "react-currency-format";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../reducer";
 import axios from "../axios";
+import {db} from "../firebase";
 const Payment = () => {
-  const [{ basket, user }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   const history = useHistory();
   const stripe = useStripe();
   const elements = useElements();
@@ -36,10 +37,23 @@ const Payment = () => {
             card: elements.getElement(CardElement)
         }
     }).then(({paymentIntent})=>{
+        db
+          .collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created
+          });
         setsucceeded(true);
-        setError(null)
-        setProcessing(false)
-        history.replace('/orders')
+        setError(null);
+        setProcessing(false);
+        dispatch({
+          type:  'EMPTY_BASKET'
+        });
+        history.replace('/orders');
     })
   };
   const handleChange = (event) => {
