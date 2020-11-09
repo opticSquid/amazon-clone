@@ -6,53 +6,53 @@ const Home = () =>
     return(
       <div className="home">
           {/* <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="test" className="home__image"/> */}
-          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Events/jupiter20/GWPhase1/2_Desktop-Hero_Rec_1500x600._CB419213952_.jpg" alt="test" className="home__image"/>
+          <img src="https://cdn.hipwallpaper.com/m/57/35/fgB0uG.jpg" alt="test" className="home__image"/>
           <div className="home__row">
                <Product
                   id="1"
-                  title="DJ & C by FBB Graphic Print T-Shirt"
-                  price={174.00}
+                  title="Medium Sized Onions 1kg"
+                  price={74}
                   ratings={5}
-                  image="https://images-na.ssl-images-amazon.com/images/I/71E5B3ztLPL._UL1500_.jpg"
+                  image="https://www.bigbasket.com/media/uploads/p/xxl/10000148_28-fresho-onion.jpg"
                />
                 <Product
               id="2"
-              title="HP Pavilion Gaming DK0268TX 15.6-inch Laptop (Core i5-9300H/8GB/512GB SSD/Windows 10 Home/4GB NVIDIA GeForce GTX 1650 Graphics), Shadow Black"
-              price={62990}
+              title="Fresho Bottle Gourd / Lauki ~500g"
+              price={17.50}
               ratings={4}
-              image="https://images-na.ssl-images-amazon.com/images/I/81pezrPSgOL._SL1500_.jpg"
+              image="https://www.bigbasket.com/media/uploads/p/l/20000745_5-fresho-bottle-gourd.jpg"
                 />
           </div>
           <div className="home__row">
                <Product
                   id="3"
-                  title="Nokia 5.3 Android One Smartphone with Quad Camera, 4 GB RAM and 64 GB Storage - Charcoal"
-                  price={12999}
+                  title="Fresho Turmeric - Fresh 250g"
+                  price={25}
                   ratings={4}
-                  image="https://images-na.ssl-images-amazon.com/images/I/61L1ItFgFHL._SL1500_.jpg"
+                  image="https://www.bigbasket.com/media/uploads/p/l/40004374_12-fresho-turmeric-fresh.jpg"
                />
                 <Product
               id="4"
-              title="New Apple iPhone 12 Pro Max (128GB) - Pacific Blue"
-              price={120000.00}
+              title="Fresh Spine Gourd / Kakrol 250g"
+              price={21}
               ratings={5}
-              image="https://images-na.ssl-images-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"
+              image="https://www.bigbasket.com/media/uploads/p/l/40042988_1-fresho-spine-gourd.jpg"
                 />
                  <Product
               id="5"
-              title="NPLASH FASHION Women's Net Semi-stitched Lehenga Choli (roop yellow-a_Blue & Yellow_Free Size)"
-              price={24999.00}
+              title="Fresho Mushrooms - Button 200g"
+              price={79}
               ratings={3}
-              image="https://images-na.ssl-images-amazon.com/images/I/61en9kN-fsL._UL1176_.jpg"
+              image="https://www.bigbasket.com/media/uploads/p/l/10000273_13-fresho-mushrooms-button.jpg"
                 />
           </div>
           <div className="home__row">
                  <Product
               id="6"
-              title="Samsung 163 cm (65 Inches) Wondertainment Series Ultra HD LED Smart TV UA65TUE60AKXXL (Titan Gray) (2020 model)"
-              price={94990}
+              title="Amul Butter - Pasteurised, 200 g Tub"
+              price={97.02}
               ratings={4}
-              image="https://images-na.ssl-images-amazon.com/images/I/71tt%2BZeOw%2BL._SL1500_.jpg"
+              image="https://www.bigbasket.com/media/uploads/p/xxl/40045943_1-amul-butter-pasteurised.jpg"
                 />
           </div>
       </div>
