@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
+import FastfoodIcon from '@material-ui/icons/Fastfood';
 const Header = () => {
   const [{ basket, user }] = useStateValue();
   const handleAuthentication = () => {
@@ -16,7 +17,9 @@ const Header = () => {
     <nav className="header">
       <Link to="/" className="header__link">
         <div className="header__option">
-          <span className="header__optionLineTwo">Food for Good</span>
+          <span className="header__optionLineTwo">Food for Good
+          <FastfoodIcon/>
+          </span>
         </div>
       </Link>
       <div className="header__search">
@@ -40,12 +43,12 @@ const Header = () => {
             <span className="header__optionLineTwo">& Orders</span>
           </div>
         </Link>
-        <Link className="header__link" to="/">
+        {/* <Link className="header__link" to="/">
           <div className="header__option">
             <span className="header__optionLineOne">Your</span>
             <span className="header__optionLineTwo">Prime</span>
           </div>
-        </Link>
+        </Link> */}
         <Link to="/checkout" className="header__link">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
