@@ -5,7 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
-import FastfoodIcon from '@material-ui/icons/Fastfood';
+import FastfoodIcon from "@material-ui/icons/Fastfood";
 const Header = () => {
   const [{ basket, user }] = useStateValue();
   const handleAuthentication = () => {
@@ -17,8 +17,9 @@ const Header = () => {
     <nav className="header">
       <Link to="/" className="header__link">
         <div className="header__option">
-          <span className="header__optionLineTwo">Food for Good
-          <FastfoodIcon/>
+          <span className="header__optionLineTwo">
+            Food for Good
+            <FastfoodIcon />
           </span>
         </div>
       </Link>
@@ -37,26 +38,47 @@ const Header = () => {
             </span>
           </div>
         </Link>
-        <Link className="header__link" to="/orders">
-          <div className="header__option">
-            <span className="header__optionLineOne">Returns</span>
-            <span className="header__optionLineTwo">& Orders</span>
-          </div>
-        </Link>
+        {user ? (
+          <Link className="header__link" to="/orders">
+            <div className="header__option">
+              <span className="header__optionLineOne">Returns</span>
+              <span className="header__optionLineTwo">& Orders</span>
+            </div>
+          </Link>
+        ) : (
+          <Link className="header__link" to="/login">
+            <div className="header__option">
+              <span className="header__optionLineOne">Returns</span>
+              <span className="header__optionLineTwo">& Orders</span>
+            </div>
+          </Link>
+        )}
+
         {/* <Link className="header__link" to="/">
           <div className="header__option">
             <span className="header__optionLineOne">Your</span>
             <span className="header__optionLineTwo">Prime</span>
           </div>
         </Link> */}
-        <Link to="/checkout" className="header__link">
-          <div className="header__optionBasket">
-            <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__BasketCount">
-              {basket?.length}
-            </span>
-          </div>
-        </Link>
+        {user ? (
+          <Link to="/checkout" className="header__link">
+            <div className="header__optionBasket">
+              <ShoppingBasketIcon />
+              <span className="header__optionLineTwo header__BasketCount">
+                {basket?.length}
+              </span>
+            </div>
+          </Link>
+        ) : (
+          <Link to="/login" className="header__link">
+            <div className="header__optionBasket">
+              <ShoppingBasketIcon />
+              <span className="header__optionLineTwo header__BasketCount">
+                {basket?.length}
+              </span>
+            </div>
+          </Link>
+        )}
       </div>
     </nav>
   );
