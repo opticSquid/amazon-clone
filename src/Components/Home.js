@@ -55,21 +55,21 @@ const Home = () => {
           image="https://www.bigbasket.com/media/uploads/p/l/30000575_13-fresho-amaranthus-red.jpg"
         />
         <Product
-          id="6"
+          id="7"
           title="Fresh Pointed Gourd Local - Deshi Patal, 500 g"
           price={40}
           ratings={3}
           image="https://www.bigbasket.com/media/uploads/p/l/40153389_1-fresho-pointed-gourd-local-deshi-patal.jpg"
         />
         <Product
-          id="7"
+          id="8"
           title="Fresh Brinjal - Purple (Bharta) / Begun, 1 kg"
           price={62}
           ratings={5}
           image="https://www.bigbasket.com/media/uploads/p/l/30000435_11-fresho-brinjal-purple-bharta.jpg"
         />
         <Product
-          id="8"
+          id="9"
           title="Fresho Cabbage, 1 pc (Approx. 350 g - 500 g)"
           price={29}
           ratings={5}
