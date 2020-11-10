@@ -64,7 +64,7 @@ const Payment = () => {
     db.collection("users")
       .doc(user?.uid)
       .collection("orders")
-      .doc(user.uid)
+      .doc(new Date().toUTCString())
       .set({
         basket: basket,
         amount: getBasketTotal(basket)*100,
