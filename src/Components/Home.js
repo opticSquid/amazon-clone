@@ -7,9 +7,6 @@ const Home = () => {
     <React.Fragment>
       <Helmet>
         <title>Amazon Clone-Home Page</title>
-        <meta property="og:title" content="Amazon Clone: Home" />
-        <meta property="og:description" content="An experimental Site to mimic Tech Giant Amazon"/>
-        <meta property="og:image" content="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
       </Helmet>
       <div className="home">
         <img
