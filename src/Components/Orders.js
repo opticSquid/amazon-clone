@@ -5,7 +5,7 @@ import { useStateValue } from "../StateProvider";
 import Order from "./OrderList";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-  const [{ basket, user }] = useStateValue();
+  const [{ user }] = useStateValue();
   useEffect(() => {
     if (user) {
       db.collection("users")

@@ -67,3 +67,8 @@
 {
     margin: auto 10px auto 7px;
 }
+@media only screen and (max-width: 768px){
+    .header__searchInput{
+        display: none;
+    }
+}

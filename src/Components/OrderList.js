@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+//import moment from "moment";
 import "../Stylesheets/OrderList.css";
 import CheckoutProduct from "./CheckoutProduct";
 import CurrencyFormat from "react-currency-format";
@@ -7,7 +7,7 @@ const Order = ({ order }) => {
   return (
     <div className="order">
       <h2>Order</h2>
-      <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mma")}</p>
+      {/* <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mma")}</p> */}
       <p className="order__id">
         <small>{order.id}</small>
       </p>
